@@ -1,0 +1,22 @@
+<app-backbtn></app-backbtn>
+<div class="info-container flex-row">
+  <img src={{res.flags.png}} class="background-shadow"/>
+  <div class="all-info">
+    <h2>{{res.name.common}}</h2>
+    <div class="text-info flex-row size-1em">
+      <div>
+        <p>Native Name: <span>{{name.official}}</span></p>
+        <p>Population: <span>{{res.population}}</span></p>
+        <p>Region: <span>{{res.region}}</span></p>
+        <p>Sub region: <span>{{res.subregion}}</span></p>
+        <p>Capital: <span>{{res.capital[0]}}</span></p>
+      </div>
+      <div>
+        <p>Top Level Domain: <span>{{res.tld}}</span></p>
+        <p>Currencies: <span *ngFor="let item of currency | keyvalue">{{item.key}}</span></p>
+        <p>Languages: <span *ngFor="let item of languages | keyvalue">{{item.key}}</span></p>
+      </div>
+    </div>
+    <div class="border-countries flex-row"><p>Border Countries:</p><div *ngFor="let border of borders" class="background-shadow size-1em">{{border}}</div></div>
+  </div>
+</div>

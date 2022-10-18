@@ -1,0 +1,6 @@
+<div class="header flex-row background-shadow">
+  <a [routerLink]="'/'"><h1>Where in the world?</h1></a>
+  <h4 class="size-1em" (click)="changeTheme()">
+    <fa-icon *ngIf="!theme" [icon]="faMoon"></fa-icon>
+    <fa-icon *ngIf="theme" [icon]="faSun"></fa-icon> Dark Mode</h4>
+</div>

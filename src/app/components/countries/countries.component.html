@@ -1,0 +1,9 @@
+<div *ngFor="let post of posts" class="country-card background-shadow" (click)="openInfo(post.name.common)">
+  <img src={{post.flags.png}}/>
+  <div class="countries-info">
+    <h3>{{post.name.common}}</h3>
+    <h5>Population: <span>{{post.population}}</span></h5>
+    <h5>Region: <span>{{post.region}}</span></h5>
+    <h5>Capital: <span>{{post.capital}}</span></h5>
+  </div>
+</div>
